@@ -3,5 +3,15 @@
   "description": "test",
   "repository": "https://github.com/NipunaPrashan/heroku.git",
   "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": ["node", "express", "static"]
+  "keywords": ["node", "express", "static"],
+  "env": {
+    "WSO2 Email": {
+      "description": "WSO2 credentials are required to delpoy APIs on On-Prem gateway.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  }
 }
