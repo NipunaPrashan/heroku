@@ -14,5 +14,11 @@
     "WSO2_CLOUD_ORG_KEY": {
       "description": "Please enter your Organization Key used in WSO2 API Cloud"
     }
+  },
+  "formation": {
+    "web": {
+      "quantity": 2,
+      "size": "standard-2x"
+    }
   }
 }
