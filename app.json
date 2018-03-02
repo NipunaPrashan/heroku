@@ -2,7 +2,7 @@
   "name": "Prashan test",
   "description": "test",
   "repository": "https://github.com/NipunaPrashan/heroku.git",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "logo": "https://s3.amazonaws.com/assets.heroku.com/addons.heroku.com/icons/2194/original.png?1515556806",
   "keywords": ["node", "express", "static"],
   "env": {
     "WSO2_CLOUD_EMAIL": {
