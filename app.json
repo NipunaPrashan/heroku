@@ -5,13 +5,17 @@
   "logo": "https://node-js-sample.herokuapp.com/node.png",
   "keywords": ["node", "express", "static"],
   "env": {
-    "WSO2 Email": {
-      "description": "WSO2 credentials are required to delpoy APIs on On-Prem gateway.",
-      "generator": "secret"
+    "WSO2 Cloud Account Email": {
+      "description": "Your credentials will be required for accessing the services in API Cloud which are required for the functionality of the On Premise Gateway.",
+      "required": true
     },
-    "WEB_CONCURRENCY": {
-      "description": "The number of processes to run.",
-      "value": "5"
+    "WSO2 Cloud Account Password": {
+      "description": "Please enter WSO2 Cloud Account password",
+      "required": true
+    },
+    "WSO2 Cloud Organization Key": {
+      "description": "Please enter your Organization Key used in WSO2 API Cloud",
+      "required": true
     }
   }
 }
