@@ -11,6 +11,9 @@ unzip -q $DOWNLOAD_ZIP_FILE_NAME
 cd $UNZIPPED_FILE_NAME
 
 
-#Binding Heroku dynamic port to Axis2 synapse port. 
+#Binding Heroku dynamic port to Axis2 synapse port.
+sed -i 's/ORG_KEY=""/ORG_KEY="${WSO2_CLOUD_ORG_KEY}"/' bin/configure-gateway.sh
+sed -i 's/EMAIL=""/EMAIL="${WSO2_CLOUD_EMAIL}"/' bin/configure-gateway.sh
+sed -i 's/PASSWORD=""/PASSWORD="${WSO2_CLOUD_PASSWORD}"/' bin/configure-gateway.sh 
 echo 'sed -i "s/8280/$PORT/" repository/conf/axis2/axis2.xml' >> bin/configure-gateway.sh
 echo 'bash bin/wso2server.sh -Dsetup' >> bin/configure-gateway.sh

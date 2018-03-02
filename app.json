@@ -5,22 +5,14 @@
   "logo": "https://node-js-sample.herokuapp.com/node.png",
   "keywords": ["node", "express", "static"],
   "env": {
-    "WSO2 Cloud Account Email": {
-      "description": "Your credentials will be required for accessing the services in API Cloud which are required for the functionality of the On Premise Gateway.",
-      "value": ""
+    "WSO2_CLOUD_EMAIL": {
+      "description": "Your credentials will be required for accessing the services in API Cloud which are required for the functionality of the On Premise Gateway."
     },
-    "SLACK_URL": {
-      "description": "Please enter WSO2 Cloud Account password",
-      "value": ""
+    "WSO2_CLOUD_PASSWORD": {
+      "description": "Please enter WSO2 Cloud Account password"
     },
-    "SLACK_TOKEN": {
-      "description": "access token of slack, You can generate it in https://api.slack.com/web#auth",
-      "value": ""
-    },
-    "INVITE_TOKEN": {
-      "description": "Shared invite token used to get access. Leave blank if you don't want users to have to provide a token.",
-      "value": "",
-      "required": false
+    "WSO2_CLOUD_ORG_KEY": {
+      "description": "Please enter your Organization Key used in WSO2 API Cloud"
     }
   }
 }
