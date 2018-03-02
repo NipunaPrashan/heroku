@@ -8,7 +8,7 @@ echo "Setting up WSO2 On-prem API Gateway..."
 unzip -q $DOWNLOAD_ZIP_FILE_NAME
 
 #Move to On-premise root directory.
-cd $UNZIPPED_FILE_NAME
+#cd $UNZIPPED_FILE_NAME
 
 
 #Binding Heroku dynamic port to Axis2 synapse port.
