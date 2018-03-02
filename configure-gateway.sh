@@ -17,6 +17,6 @@ sed -i 's/ORG_KEY=""/ORG_KEY="${WSO2_CLOUD_ORG_KEY}"/' wso2am-2.1.0/bin/configur
 sed -i 's/EMAIL=""/EMAIL="${WSO2_CLOUD_EMAIL}"/' wso2am-2.1.0/bin/configure-gateway.sh
 sed -i 's/PASSWORD=""/PASSWORD="${WSO2_CLOUD_PASSWORD}"/' wso2am-2.1.0/bin/configure-gateway.sh 
 echo 'sed -i "s/8280/$PORT/" wso2am-2.1.0/repository/conf/axis2/axis2.xml' >> wso2am-2.1.0/bin/configure-gateway.sh
-echo 'bash bin/wso2server.sh -Dsetup' >> wso2am-2.1.0/bin/configure-gateway.sh
+echo 'bash wso2am-2.1.0/bin/wso2server.sh -Dsetup' >> wso2am-2.1.0/bin/configure-gateway.sh
 
 sh wso2am-2.1.0/bin/configure-gateway.sh
