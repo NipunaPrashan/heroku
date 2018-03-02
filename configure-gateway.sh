@@ -4,7 +4,7 @@ ON_PREM_GATEWAY_DOWNLOAD_LINK=https://s3.amazonaws.com/wso2cloud-resources/on-pr
 
 if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]; then
     echo "Downloading WSO2 On-Prem API Gateway..."
-    wget $ON_PREM_GATEWAY_DOWNLOAD_LINK
+    wget -q $ON_PREM_GATEWAY_DOWNLOAD_LINK
 fi
 
 if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]
