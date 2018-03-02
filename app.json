@@ -6,13 +6,16 @@
   "keywords": ["node", "express", "static"],
   "env": {
     "WSO2 Cloud Account Email": {
-      "description": "Your credentials will be required for accessing the services in API Cloud which are required for the functionality of the On Premise Gateway."
+      "description": "Your credentials will be required for accessing the services in API Cloud which are required for the functionality of the On Premise Gateway.",
+      "value": ""
     },
     "WSO2 Cloud Account Password": {
-      "description": "Please enter WSO2 Cloud Account password"
+      "description": "Please enter WSO2 Cloud Account password",
+      "value": ""
     },
     "WSO2 Cloud Organization Key": {
-      "description": "Please enter your Organization Key used in WSO2 API Cloud"
+      "description": "Please enter your Organization Key used in WSO2 API Cloud",
+      "value": ""
     }
   }
 }
