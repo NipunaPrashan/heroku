@@ -7,6 +7,7 @@ wget $ON_PREM_GATEWAY_DOWNLOAD_LINK
 echo "Setting up WSO2 On-prem API Gateway..."
 unzip -q $DOWNLOAD_ZIP_FILE_NAME
 pwd
+ls
 #Move to On-premise root directory.
 #cd $UNZIPPED_FILE_NAME
 
