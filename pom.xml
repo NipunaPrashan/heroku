@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://maven.apache.org/POM/4.0.0"
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+     <modelVersion>4.0.0</modelVersion>
+     <groupId>org.wso2.carbon</groupId>
+     <artifactId>on-premise-api-gateway</artifactId>
+     <version>1.0</version>
+     <build>
+        <plugins>
+            <plugin>
+                <artifactId>exec-maven-plugin</artifactId>
+                <groupId>org.codehaus.mojo</groupId>
+                <executions>
+                    <execution>
+                        <id>WSO2 On-Premise API Gateway</id>
+                        <phase>generate-sources</phase>
+                        <goals/>
+                        <configuration/>
+                    </execution>
+                </executions>
+            </plugin>
+       </plugins>
+  </build>
+</project>

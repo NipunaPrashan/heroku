@@ -1,0 +1,7 @@
+{
+  "name": "Prashan test",
+  "description": "test",
+  "repository": "https://github.com/NipunaPrashan/heroku.git",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "static"]
+}
