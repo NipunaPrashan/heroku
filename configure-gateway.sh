@@ -22,7 +22,7 @@ if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]
 	    sed -i 's/EMAIL=""/EMAIL="${WSO2_CLOUD_EMAIL}"/' $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
 	    sed -i 's/PASSWORD=""/PASSWORD="${WSO2_CLOUD_PASSWORD}"/' $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
 	    echo 'sed -i "s/8280/$PORT/" wso2am-2.1.0/repository/conf/axis2/axis2.xml' >> $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
-	    echo 'bash wso2am-2.1.0/bin/wso2server.sh -Dsetup' >> $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
+	    echo 'bash wso2am-2.1.0/bin/wso2server.sh' >> $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
         fi
 fi
 
