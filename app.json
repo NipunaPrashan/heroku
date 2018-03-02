@@ -1,9 +1,9 @@
 {
   "name": "WSO2 On-Prem API Gateway",
-  "description": "test",
+  "description": "Deploy your WSO2 API Gateway on Heroku",
   "repository": "https://github.com/NipunaPrashan/heroku.git",
   "logo": "https://s3.amazonaws.com/assets.heroku.com/addons.heroku.com/icons/2194/original.png?1515556806",
-  "keywords": ["node", "express", "static"],
+  "keywords": ["wso2", "api-gateway", "on-prem", "hybrid", "cloud"],
   "env": {
     "WSO2_CLOUD_EMAIL": {
       "description": "Your credentials will be required for accessing the services in API Cloud which are required for the functionality of the On Premise Gateway."
