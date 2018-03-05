@@ -29,10 +29,10 @@ if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]
         fi
 fi
 sh $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
-if [  -f $DOWNLOAD_ZIP_FILE_NAME ]; then
+if [ -f $DOWNLOAD_ZIP_FILE_NAME ]; then
     echo "###################deleting####################"
     rm -rf DOWNLOAD_ZIP_FILE_NAME
     
 fi
 
-ls-lh
+ls -lh
