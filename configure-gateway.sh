@@ -28,9 +28,11 @@ if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]
 	    echo 'bash wso2am-2.1.0/bin/wso2server.sh' >> $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
         fi
 fi
-ls
-echo "###################deleting####################"
-rm -rf $DOWNLOAD_ZIP_FILE_NAME
+
+# Remove zip file after extracting files.
+if [ -f $DOWNLOAD_ZIP_FILE_NAME ]; then
+    rm -rf $DOWNLOAD_ZIP_FILE_NAME
+fi
 ls -lh
 
 sh $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
