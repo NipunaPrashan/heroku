@@ -29,5 +29,5 @@ if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]
             rm -rf DOWNLOAD_ZIP_FILE_NAME
         fi
 fi
-
+ls
 sh $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
