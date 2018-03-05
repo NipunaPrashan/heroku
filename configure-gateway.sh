@@ -25,7 +25,7 @@ ON_PREM_GATEWAY_DOWNLOAD_LINK=https://s3.amazonaws.com/wso2cloud-resources/on-pr
 command -v wget >/dev/null 2>&1 || { echo >&2 "wget was not found. Please install wget first."; exit 1; }
 command -v unzip >/dev/null 2>&1 || { echo >&2 "unzip was not found. Please install unzip first."; exit 1; }
 
-if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ] || [ ! -d $UNZIPPED_FILE_NAME ]; then
+if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]; then
     echo "Setting up WSO2 On-Prem API Gateway..."
     wget -q $ON_PREM_GATEWAY_DOWNLOAD_LINK
 fi
@@ -40,8 +40,8 @@ if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]
             unzip -q $DOWNLOAD_ZIP_FILE_NAME
              
             #Binding Heroku dynamic port to Axis2 synapse port.
-	        echo 'sed -i "s/8280/$PORT/" wso2am-2.1.0/repository/conf/axis2/axis2.xml' >> $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
 	        sed -i 's/AUTOSTART="${WSO2_CLOUD_AUTOSTART:-"false"}"/AUTOSTART="${WSO2_CLOUD_AUTOSTART:-"true"}"/' $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
+	        sed -i 's/${CARBON_HOME}/bin/wso2server.sh/AUTOSTART="${WSO2_CLOUD_AUTOSTART:-"true"}"\/sed -i "s/8280/$PORT/" wso2am-2.1.0/repository/conf/axis2/axis2.xml/' $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
         fi
 fi
 
