@@ -26,7 +26,7 @@ command -v wget >/dev/null 2>&1 || { echo >&2 "wget was not found. Please instal
 command -v unzip >/dev/null 2>&1 || { echo >&2 "unzip was not found. Please install unzip first."; exit 1; }
 
 if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]; then
-    echo "Setting up WSO2 On-Prem API Gateway..."
+    echo "Setting up WSO2 API Microgateway..."
     wget -q $ON_PREM_GATEWAY_DOWNLOAD_LINK
 fi
 
@@ -46,8 +46,8 @@ if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]
 fi
 
 # Remove zip file after extracting files.
-#if [ -f $DOWNLOAD_ZIP_FILE_NAME ]; then
-   # rm -rf $DOWNLOAD_ZIP_FILE_NAME
-#fi
+if [ -f $DOWNLOAD_ZIP_FILE_NAME ]; then
+    rm -rf $DOWNLOAD_ZIP_FILE_NAME
+fi
 
 sh $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
