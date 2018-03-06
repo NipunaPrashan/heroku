@@ -40,14 +40,13 @@ if [ ! -f $DOWNLOAD_ZIP_FILE_NAME ]
             unzip -q $DOWNLOAD_ZIP_FILE_NAME
              
             #Binding Heroku dynamic port to Axis2 synapse port.
-	        sed -i 's/AUTOSTART="${WSO2_CLOUD_AUTOSTART:-"false"}"/AUTOSTART="${WSO2_CLOUD_AUTOSTART:-"true"}"/' $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
-	        sed -i 's/${CARBON_HOME}/bin/wso2server.sh/AUTOSTART="${WSO2_CLOUD_AUTOSTART:-"true"}"\/sed -i "s/8280/$PORT/" wso2am-2.1.0/repository/conf/axis2/axis2.xml/' $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
+	    sed -i 's#AUTOSTART="${WSO2_CLOUD_AUTOSTART:-"false"}"#AUTOSTART="${WSO2_CLOUD_AUTOSTART:-"true"}" \nsed -i "s/8280/$PORT/" wso2am-2.1.0/repository/conf/axis2/axis2.xml#' $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
         fi
 fi
 
 # Remove zip file after extracting files.
-if [ -f $DOWNLOAD_ZIP_FILE_NAME ]; then
-    rm -rf $DOWNLOAD_ZIP_FILE_NAME
-fi
+#if [ -f $DOWNLOAD_ZIP_FILE_NAME ]; then
+   # rm -rf $DOWNLOAD_ZIP_FILE_NAME
+#fi
 
 sh $UNZIPPED_FILE_NAME/bin/configure-gateway.sh
